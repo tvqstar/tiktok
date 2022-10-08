@@ -2,9 +2,10 @@
     display: flex;
     padding: 10px;
     cursor: pointer;
+    align-items: center;
 
     &:hover {
-        background: rgba(22, 24, 35, 0.06);
+        background: rgba(22, 24, 35, 0.03);
     }
 }
 
@@ -16,6 +17,7 @@
 }
 
 .info {
+    flex: 1;
     margin-left: 8px;
 }
 
@@ -31,6 +33,6 @@
 }
 
 .username {
-    color: #b9babd;
+    color: rgba(22, 24, 35, 0.5);
     font-size: 1.4rem;
 }

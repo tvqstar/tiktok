@@ -1,11 +1,15 @@
 .wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.6rem;
     font-weight: 700;
     padding: 9px 16px;
     border-radius: 4px;
     min-width: 100px;
     user-select: none;
-    background-color: transparent;
+    cursor: pointer;
+    background-color: #fff;
     border: 1px solid transparent;
 
     + .wrapper {
@@ -29,6 +33,17 @@
     text-align: center;
 }
 
+.rounded {
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
+    border-color: rgba(22, 24, 35, 0.12);
+
+    &:hover {
+        border-color: rgba(22, 24, 35, 0.2);
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
 .primary {
     color: #fff;
     background-color: var(--primary);
@@ -47,5 +62,11 @@
 
     &:hover {
         background-color: rgba(254, 44, 85, 0.06);
+    }
+}
+
+.text {
+    &:hover {
+        text-decoration: underline;
     }
 }
