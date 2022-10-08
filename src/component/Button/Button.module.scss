@@ -20,6 +20,14 @@
         pointer-events: none;
         opacity: 0.5;
     }
+
+    &.primary{
+        color: #fff;
+    }
+
+    &.outline{
+        color: var(--primary);
+    }
 }
 
 .icon + .title,
@@ -45,9 +53,8 @@
 }
 
 .primary {
-    color: #fff;
     background-color: var(--primary);
-    border: 1px solid transparent;
+    border: var(--primary);
 
     &:hover {
         opacity: 0.7;
@@ -57,7 +64,6 @@
 
 .outline {
     border: 1px solid var(--primary);
-    color: var(--primary);
     background-color: #fff;
 
     &:hover {
