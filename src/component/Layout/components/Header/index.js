@@ -8,9 +8,7 @@ import {
     faUser,
     faSignOut,
     faGear,
-    faCloudUpload,
     faCoins,
-    faMagnifyingGlass,
     faEllipsisVertical,
     faEarthAsia,
     faCircleQuestion,
@@ -26,6 +24,8 @@ import images from '~/assets/images';
 import { Wrapper as PopperWrapper } from '~/component/Popper';
 import AccountItem from '~/component/AccountItem';
 import Menu from '~/component/Popper/Menu';
+import Images from '~/component/Images';
+import { UploadIcon, MessageIcon, InboxIcon, SearchIcon } from '~/component/Icons'
 
 const cx = classNames.bind(styles);
 
@@ -138,7 +138,7 @@ function HeaderLayout() {
                         <FontAwesomeIcon className={cx('loading-icon')} icon={faSpinner} />
 
                         <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            <SearchIcon/>
                         </button>
                     </div>
                 </HeadlessTippy>
@@ -147,9 +147,22 @@ function HeaderLayout() {
                 <div className={cx('actions')}>
                     {currentUser ? (
                         <>
-                            <Tippy delay={[0, 200]} content="Upload video" placement="bottom">
+                            <Tippy delay={[0, 50]} content="Upload video" placement="bottom">
                                 <button className={cx('action-btn')}>
-                                    <FontAwesomeIcon icon={faCloudUpload} />
+                                    <UploadIcon/>
+                                </button>
+                            </Tippy>
+
+                            <Tippy delay={[0, 50]} content="Message" placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <MessageIcon/>
+                                </button>
+                            </Tippy>
+
+                            <Tippy delay={[0, 50]} content="Inbox" placement="bottom">
+                                <button className={cx('action-btn')}>
+                                    <InboxIcon/>
+                                    <span className={cx('badge')}>12</span>
                                 </button>
                             </Tippy>
                         </>
@@ -162,7 +175,7 @@ function HeaderLayout() {
 
                     <Menu items={currentUser ? userMenu : MENU_ITEMS} onChange={handleMenuChange}>
                         {currentUser ? (
-                            <img
+                            <Images
                                 className={cx('user-avatar')}
                                 src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/28c41afb73cfa841b4f70ae5cf7636bd~c5_100x100.jpeg?x-expires=1665237600&x-signature=8lrvYuLA6jYtvPhuflpMKxOA30w%3D"
                                 alt="TVQ"
