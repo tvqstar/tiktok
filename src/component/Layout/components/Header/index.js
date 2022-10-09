@@ -13,7 +13,9 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import { Link } from 'react-router-dom';
 
+import routesConfig from '~/config/routes';
 import Button from '~/component/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
@@ -31,6 +33,76 @@ const MENU_ITEMS = [
         children: {
             title: 'Language',
             data: [
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
+                {
+                    type: 'language',
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    type: 'language',
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                },
                 {
                     type: 'language',
                     code: 'en',
@@ -97,9 +169,9 @@ function HeaderLayout() {
         <header className={cx('wrapper')}>
             <div className={cx('content')}>
                 {/* Logo header */}
-                <div className={cx('header-logo')}>
+                <Link to = {routesConfig.home} className={cx('header-logo')}>
                     <img src={images.logo} alt="Logo tiktok" />
-                </div>
+                </Link>
 
                 {/* search header */}
                 <Search />
@@ -138,7 +210,7 @@ function HeaderLayout() {
                         {currentUser ? (
                             <Images
                                 className={cx('user-avatar')}
-                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/28c41afb73cfa841b4f70ae5cf7636bd~c5_100x100.jpeg?x-expires=1665237600&x-signature=8lrvYuLA6jYtvPhuflpMKxOA30w%3D"
+                                src="https://scontent.fhan15-1.fna.fbcdn.net/v/t39.30808-6/304856900_619341809759671_1336335468610133744_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=T7lB2mCoJzEAX9rj8XI&_nc_ht=scontent.fhan15-1.fna&oh=00_AT_j93oQDzVAX_Y3gecyEGgbR-CqCbWjvfhAqDewqyZVDw&oe=63473823"
                                 alt="TVQ"
                             />
                         ) : (
