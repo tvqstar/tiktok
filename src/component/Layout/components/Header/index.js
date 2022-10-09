@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -103,7 +102,7 @@ function HeaderLayout() {
                 </div>
 
                 {/* search header */}
-                <Search/>
+                <Search />
 
                 {/* action header */}
                 <div className={cx('actions')}>
