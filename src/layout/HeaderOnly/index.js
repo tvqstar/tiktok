@@ -1,4 +1,6 @@
-import HeaderLayout from '~/component/Layout/components/Header';
+import PropTypes from 'prop-types';
+
+import HeaderLayout from '~/layout/components/Header';
 
 function HeaderOnly({ children }) {
     return (
@@ -10,5 +12,9 @@ function HeaderOnly({ children }) {
         </div>
     );
 }
+
+HeaderOnly.propTypes = {
+    children: PropTypes.node.isRequired,
+};
 
 export default HeaderOnly;

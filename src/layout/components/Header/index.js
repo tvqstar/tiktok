@@ -22,7 +22,7 @@ import images from '~/assets/images';
 import Menu from '~/component/Popper/Menu';
 import Images from '~/component/Images';
 import { UploadIcon, MessageIcon, InboxIcon } from '~/component/Icons';
-import Search from '~/component/Layout/components/Search';
+import Search from '~/layout/components/Search';
 
 const cx = classNames.bind(styles);
 
@@ -33,76 +33,6 @@ const MENU_ITEMS = [
         children: {
             title: 'Language',
             data: [
-                {
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
-                {
-                    type: 'language',
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    type: 'language',
-                    code: 'vi',
-                    title: 'Tiếng Việt',
-                },
                 {
                     type: 'language',
                     code: 'en',
@@ -169,7 +99,7 @@ function HeaderLayout() {
         <header className={cx('wrapper')}>
             <div className={cx('content')}>
                 {/* Logo header */}
-                <Link to = {routesConfig.home} className={cx('header-logo')}>
+                <Link to={routesConfig.home} className={cx('header-logo')}>
                     <img src={images.logo} alt="Logo tiktok" />
                 </Link>
 
